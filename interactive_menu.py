@@ -30,5 +30,5 @@ def menu (end_menu):
 
     return "Thank you for using our services!"
 
-end_message = menu
+end_message = menu(end_menu)
 print(end_message)
