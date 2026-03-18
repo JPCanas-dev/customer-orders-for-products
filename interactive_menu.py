@@ -1,26 +1,30 @@
 end_menu = 0
 
 def menu (end_menu):
-    print("1. Create order")
-    print("2. Display order history")
-    print("3. Generate report")
-    print("4. Exit")
-
-    option = input("Please select an option")
 
     while end_menu == 0:
 
-        if opcion == "1":
-                create
+        print("1. Create order")
+        print("2. Display order history")
+        print("3. Generate report")
+        print("4. Exit")
 
-        elif opcion == "2":
-            retirar(obtener_valor_saldo())
+        option = input("Please select an option: ").strip()
 
-        elif opcion == "3":
-            depositar(obtener_valor_saldo())
+        if option == "1":
+            create_order()
 
-        elif opcion == "4":
-            mostrar_historial()
+        elif option == "2":
+            view_orders = order_history()
+            print(view_orders)
+             
+        elif option == "3":
+            generate_report = final_report()
+            print(generate_report)
+
+        elif option == "4":
+            end_menu = 1
+            print("Thank you for using our services!")
 
         else:
-            print("Opción no válida")
+            print("Please enter a valid value")
