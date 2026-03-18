@@ -9,10 +9,10 @@ def menu (end_menu):
         print("3. Generate report")
         print("4. Exit")
 
-        option = input("Please select an option: ").strip()
+        option = input("Please select an option: ")
 
         if option == "1":
-            create_order()
+            registrer_product()
 
         elif option == "2":
             view_orders = order_history()
@@ -24,7 +24,11 @@ def menu (end_menu):
 
         elif option == "4":
             end_menu = 1
-            print("Thank you for using our services!")
 
         else:
             print("Please enter a valid value")
+
+    return "Thank you for using our services!"
+
+end_message = menu
+print(end_message)
