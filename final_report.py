@@ -5,7 +5,7 @@ def final_report(orders):
     products = {}
     for order_id, order in orders.item():
         total_orders += 1
-        total_income += order["tot:al"]
+        total_income += order["total"]
 
         client = order["client"]
         product = order["product"]
