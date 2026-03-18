@@ -1,3 +1,5 @@
+from customer_database import customers
+
 def register_products():
 
     client_name = str (input("Enter your name: "))
