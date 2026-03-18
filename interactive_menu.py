@@ -4,12 +4,12 @@ def menu (end_menu):
 
     while end_menu == 0:
 
-        print("1. Create order")
+        print("\n1. Create order")
         print("2. Display order history")
         print("3. Generate report")
         print("4. Exit")
 
-        option = input("Please select an option: ")
+        option = input("\nPlease select an option: ")
 
         if option == "1":
             registrer_product()
