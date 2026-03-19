@@ -2,12 +2,13 @@
 from customer_database import customers
 from product_database import products
 
-# This function generates a final report summarizing the total orders, total income,
+# This function generates a final report summarizing the total orders, total income, orders by customer.
+#and units sold by product.
 def final_report(orders):
 
 # Check if there are any orders to report
     if len(orders) == 0:
-        return "\nNO ORDERS TO REPORT!\n"
+        return "\nNO ORDERS TO REPORT!"
     
 # Initialize summary variables
     total_orders = 0
