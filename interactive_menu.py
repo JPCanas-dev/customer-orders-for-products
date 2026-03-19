@@ -1,6 +1,12 @@
-end_menu = 0
+from order_creation import register_order
+from order_history  import view_orders
+from final_report   import final_report
 
-def menu (end_menu):
+# Display the main menu and handle user interaction.
+
+def menu(orders):
+
+    end_menu = 0 # Controls loop execution
 
     while end_menu == 0:
 
@@ -12,23 +18,24 @@ def menu (end_menu):
         option = input("\nPlease select an option: ")
 
         if option == "1":
-            registrer_product()
+            # Add a new order
+            orders = register_order(orders)
 
         elif option == "2":
-            view_orders = order_history()
-            print(view_orders)
-             
+            # Display order history
+            result = view_orders(orders)
+            print(result)
+
         elif option == "3":
-            generate_report = final_report()
-            print(generate_report)
+            # Display summary report
+            print(final_report(orders))
 
         elif option == "4":
+            # Exit While loop
             end_menu = 1
 
         else:
+             # Any invalid input
             print("Please enter a valid value")
 
-    return "Thank you for using our services!"
-
-end_message = menu(end_menu)
-print(end_message)
+    return "\nTHANK YOU FOR USING OUR SERVICES!\n"
