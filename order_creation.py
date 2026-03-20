@@ -63,7 +63,10 @@ def register_order(orders):
         while correct_quantity == 0:
             try:
                 quantity = int(input("Enter the amount: "))
-                correct_quantity = 1
+                if quantity <= 0:
+                    print("\nPlease enter only postive numbers")
+                else:
+                    correct_quantity = 1
             except ValueError:
                 print("\nPlease enter only integer numbers")
 
