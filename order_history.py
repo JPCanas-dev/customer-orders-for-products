@@ -7,7 +7,8 @@ def view_orders(orders):
 
     # Check if there are no orders registered
     if len(orders) == 0:
-        return "No orders registered"
+        return "\nNO ORDERS REGISTERED!"
+    #non-registration notice
 
     # Iterate over each order in the orders dictionary
     for order_id in orders:
